@@ -3,7 +3,7 @@
 ![Build Status](https://github.com/leadlineit/ansible-role-ntp/actions/workflows/ansible-galaxy-ci.yml/badge.svg)
 [![Galaxy Role](https://img.shields.io/badge/Ansible--Galaxy-leadlineit.ntp-blue.svg?logo=ansible&logoColor=white)](https://galaxy.ansible.com/leadlineit/ntp/)
 
-This role helps to install and configure NTP server on a Debian (stretch/buster/bullseye).
+This role helps to install and configure NTP server on a Debian (buster/bullseye).
 
 Requirements
 ------------
