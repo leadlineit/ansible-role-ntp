@@ -1,0 +1,6 @@
+---
+ntp_server:
+  - ntp.exact-time.org
+  - time.cloudflare.com
+  - ntp1.itcompliance.dk
+  - ntp.ea1145.net

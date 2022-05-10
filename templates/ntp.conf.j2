@@ -1,0 +1,33 @@
+#{{ ansible_managed }}
+driftfile /var/lib/ntp/ntp.drift
+leapfile /usr/share/zoneinfo/leap-seconds.list
+
+statistics loopstats peerstats clockstats
+filegen loopstats file loopstats type day enable
+filegen peerstats file peerstats type day enable
+filegen clockstats file clockstats type day enable
+
+{% for s in ntp_server %}
+server {{ s }} iburst
+{% endfor %}
+
+restrict default kod limited nomodify notrap nopeer noquery
+restrict -6 default kod limited nomodify notrap nopeer noquery
+
+restrict 127.0.0.1
+restrict -6 ::1
+
+{% if ntp_restrict is defined %}
+{% for r in ntp_server %}
+restrict {{ r }} iburst
+{% endfor %}
+{% endif %}
+
+{% if ntp_interface is defined %}
+{% for i in ntp_interface %}
+interface {{ i }}
+{% endfor %}
+{% else %}
+interface ignore wildcard
+interface listen lo
+{% endif %}
