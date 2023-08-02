@@ -1,14 +1,20 @@
-# Ansible Galaxy role for install and configure NTP server
+# Ansible Galaxy role for install and configure NTP server.
 
 ![Build Status](https://github.com/leadlineit/ansible-role-ntp/actions/workflows/ansible-galaxy-ci.yml/badge.svg)
 [![Galaxy Role](https://img.shields.io/badge/Ansible--Galaxy-leadlineit.ntp-blue.svg?logo=ansible&logoColor=white)](https://galaxy.ansible.com/leadlineit/ntp/)
 
-This role helps to install and configure NTP server on a Debian (buster/bullseye).
+This role helps to install and configure NTP server.
+
+Supported OSes
+--------------
+- Debian 12 (bookworm)
+- Debian 11 (bullseye)
+- Debian 10 (buster)
 
 Requirements
 ------------
 
-This role requires Ansible 2.0 or higher.
+This role requires Ansible 2.11 or higher.
 
 Role Variables
 --------------
